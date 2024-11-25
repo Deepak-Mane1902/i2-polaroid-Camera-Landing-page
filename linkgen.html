@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body onload="gen()">
+     <div></div>
+<script type="text/javascript">
+     function gen(){
+          let arr =[];
+          let value =119;
+
+          let a = "https://i2-camera.polaroid.com/_next/image?url=/images/discover/control-panel/0000";
+          let b = ".jpg&w=640&q=90";
+          for(let i=0;i<10;i++){
+               arr.push(a+i+b)
+          }
+          let c = "https://i2-camera.polaroid.com/_next/image?url=/images/discover/control-panel/000";
+          for(let i=10;i<100;i++){
+               arr.push(c+i+b)
+          }
+          let d = "https://i2-camera.polaroid.com/_next/image?url=/images/discover/control-panel/00";
+          for(let i=100;i<=value;i++){
+               arr.push(d+i+b)
+          }
+          console.log(arr)
+
+          let div =document.querySelector("div");
+          div.innerHTML =arr.join("<br>");
+}
+</script>
+</body>
+</html>
